@@ -2,7 +2,8 @@
 
 namespace DB;
 
-use App;
+use Core\App;
+use PDOException;
 
 
 Class CreateTables

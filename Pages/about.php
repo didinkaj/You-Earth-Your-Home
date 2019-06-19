@@ -6,7 +6,7 @@
         <div class="left-column">
             <div class="full ">
                 <div class="content">
-                    <h4 style="text-align: center">CEO: Norman kosgei lagat</h4>
+                    <h4 style="text-align: center">CEO: Johnson Didinya</h4>
                     <img src="../images/ceo.jpg" alt="ceo" style="width: 100%;">
                     <p>is a not for profit organisation
                         that aims to promote sustainability

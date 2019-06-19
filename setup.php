@@ -1,6 +1,6 @@
 <?php
 
-require('./Database/CreateTables.php');
+use DB\CreateTables;
 
 ini_set('display_errors', 1);
 
