@@ -56,10 +56,10 @@ class SubscribePage
         if (isset($_SESSION['name']) && isset($_SESSION['email'])) {
             $users = App::get('database')->selectAll('users');
 
-            return page('all-members', compact('users'), $success);
+            return page('all-members', compact('users','success'));
 
         }
-        return page('subscribe', $success);
+        return page('subscribe', compact('success'));
 
     }
 

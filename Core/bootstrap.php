@@ -15,6 +15,7 @@ App::bind('database', new QueryBuilder(
 function page($name, $data = [])
 {
     extract($data);
+
     require("Pages/{$name}.php");
 }
 

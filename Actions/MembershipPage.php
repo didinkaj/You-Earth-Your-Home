@@ -36,7 +36,7 @@ class MembershipPage
 
         $error = "Log in Failed Check You Details and try again";
 
-        return page('membership', $error);
+        return page('membership', compact('error'));
 
 
     }
