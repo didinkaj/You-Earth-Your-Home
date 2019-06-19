@@ -1,0 +1,20 @@
+{
+    "name": "dj/task1",
+    "authors": [
+        {
+            "name": "didinya johnson",
+            "email": "didinkaj@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DB\\": "Database/",
+            "Actions\\": "Actions/",
+            "Core\\": "Core/"
+        },
+        "files": [
+            "library/functions.php"
+        ]
+    },
+    "require": {}
+}
