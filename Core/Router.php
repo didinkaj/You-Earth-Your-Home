@@ -56,7 +56,6 @@ class Router
      */
     public function direct($uri, $requestType)
     {
-        dd($uri);
         if (array_key_exists($uri, $this->routes[$requestType])) {
 
             return $this->callAction(
