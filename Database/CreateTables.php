@@ -10,9 +10,17 @@ Class CreateTables
 {
     public $db;
 
+    public $schema;
+
+    /**
+     * CreateTables constructor.
+     * @throws \Exception
+     */
     public function __construct()
     {
         $this->db = App::get('database');
+        $this->schema = new Schema();
+
     }
 
     /**
@@ -25,13 +33,13 @@ Class CreateTables
         try {
 
             $sql = "CREATE TABLE IF NOT EXISTS users (
-            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            {$this->schema->primaryKey()},
             name VARCHAR(100) NOT NULL,
             sex VARCHAR(20) NOT NULL,
-            age INTEGER (20) NOT NULL,
+            age INTEGER  NOT NULL,
             email VARCHAR(50) NOT NULL UNIQUE ,
             address VARCHAR(255) NOT NULL,
-            phone_number INTEGER(20) NOT NULL,
+            phone_number BIGINT NOT NULL,
             password VARCHAR(100),
             reg_date TIMESTAMP
         )";
@@ -64,12 +72,12 @@ Class CreateTables
         try {
 
             $sql = "CREATE TABLE IF NOT EXISTS events (
-            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            {$this->schema->primaryKey()},
             name VARCHAR(255) NOT NULL,
             event_description VARCHAR(255) NOT NULL,
             image VARCHAR(255)  NULL,
             date VARCHAR(20) NOT NULL,
-            user_id INTEGER (20) NOT NULL,
+            user_id BIGINT  NOT NULL,
             reg_date TIMESTAMP
         )";
 
@@ -103,9 +111,9 @@ Class CreateTables
         try {
 
             $sql = "CREATE TABLE IF NOT EXISTS event_users (
-            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            user_id INTEGER (20) NOT NULL,
-            event_id INTEGER (20) NOT NULL,
+            {$this->schema->primaryKey()},
+            user_id BIGINT NOT NULL,
+            event_id BIGINT NOT NULL,
             reg_date TIMESTAMP
         )";
 
