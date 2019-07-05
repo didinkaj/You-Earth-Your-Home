@@ -14,7 +14,7 @@ class CalenderPage
     {
         $events = App::get('database')->selectAll('events');
 
-        return page('calender', $events);
+        return page('calender', compact('events'));
     }
 
 
