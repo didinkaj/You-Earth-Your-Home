@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dbConnection'=>'sql',
+    'dbConnection'=>'pgsql',
 
     'database' => [
         'sql'=>[
