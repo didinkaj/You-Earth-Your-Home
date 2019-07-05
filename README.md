@@ -1,4 +1,4 @@
 # You-Earth-Your-Home
-You Earth   Your Home built with a custom micro-framework
+You Earth   Your Home built with a custom [micro-framework](https://github.com/didinkaj/micro-framework)
 
-Demo https://your-earth-your-home.herokuapp.com/
+[Demo](https://jdk.co.ke)
