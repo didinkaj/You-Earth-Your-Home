@@ -2,7 +2,7 @@
 
 use Core\Request;
 
-if (! function_exists('dd')) {
+if (!function_exists('dd')) {
     function dd($value = '')
     {
         die(
@@ -13,17 +13,23 @@ if (! function_exists('dd')) {
 }
 
 //loading pages
-if (! function_exists('page')) {
-    function page($name, $data = [])
+if (!function_exists('page')) {
+    function page($viewName, $data = '')
     {
-        extract($data);
+        if (is_array($data)) {
+            extract($data);
+        }
 
-        require("Pages/{$name}.php");
+        if (is_object($data)) {
+            extract((array)$data);
+        }
+
+        require("Pages/".func_get_args()[0].".php");
     }
 }
 
 //setting active link
-if (! function_exists('setActive')) {
+if (!function_exists('setActive')) {
     function setActive($url)
     {
 
@@ -36,7 +42,7 @@ if (! function_exists('setActive')) {
 }
 
 //page redirection
-if (! function_exists('redirect')) {
+if (!function_exists('redirect')) {
     function redirect($path)
     {
         return header("Location: /{$path}");
