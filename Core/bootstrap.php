@@ -9,7 +9,7 @@ use DB\QueryBuilder;
 App::bind('config', require(__DIR__ . '/../config.php'));  //adding app configurations to the app class
 
 App::bind('database', new QueryBuilder(
-    Connection::make(App::get('config')['database'][App::get('config')['dbConnection']])
+    Connection::make(App::get('config')['database'][App::get('config')['database']['default']])
 ));
 
 App::bind('dbConnection',

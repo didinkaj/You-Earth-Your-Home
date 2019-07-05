@@ -1,9 +1,10 @@
 <?php
 
 return [
-    'dbConnection'=>'pgsql',
-
     'database' => [
+
+        'default' => 'pgsql',
+
         'sql'=>[
                 'name' => 'assignment2',
                 'username' => 'assignment2',

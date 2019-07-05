@@ -2,34 +2,43 @@
 
 use Core\Request;
 
-function dd($value = '')
-{
-    die(
-        "<pre>" . var_dump($value) . "</pre>"
-    );
+if (! function_exists('dd')) {
+    function dd($value = '')
+    {
+        die(
+            "<pre>" . var_dump($value) . "</pre>"
+        );
 
+    }
 }
 
 //loading pages
-function page($name, $data = [])
-{
-    extract($data);
+if (! function_exists('page')) {
+    function page($name, $data = [])
+    {
+        extract($data);
 
-    require("Pages/{$name}.php");
+        require("Pages/{$name}.php");
+    }
 }
 
 //setting active link
-function setActive($url){
+if (! function_exists('setActive')) {
+    function setActive($url)
+    {
 
-    if(Request::uri() == $url){
-        echo "active";
-    }else{
-        echo "";
+        if (Request::uri() == $url) {
+            echo "active";
+        } else {
+            echo "";
+        }
     }
 }
 
 //page redirection
-function redirect($path)
-{
-    return header("Location: /{$path}");
+if (! function_exists('redirect')) {
+    function redirect($path)
+    {
+        return header("Location: /{$path}");
+    }
 }
