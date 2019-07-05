@@ -25,7 +25,7 @@ class Connection
 
 		} catch (PDOException $e) {
 
-			die(var_dump("could not connect ". $e->getMessage()));
+			dd("could not connect ". $e->getMessage());
 				
 		}
 	}

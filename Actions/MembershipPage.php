@@ -85,9 +85,11 @@ class MembershipPage
      */
     public function viewMember()
     {
-        $users = App::get('database')->select('users',['id'=>$_POST['user_id']]);
+        $user = App::get('database')->select('users',['id'=>$_POST['user_id']]);
 
-        return page('all-members', compact('users'));
+        dd(extract($user));
+
+        return page('subscribe', compact('user'));
     }
 
 }

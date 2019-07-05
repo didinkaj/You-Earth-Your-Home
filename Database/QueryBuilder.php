@@ -17,6 +17,10 @@ class QueryBuilder
     }
 
 
+    /**
+     * @param $table
+     * @return mixed
+     */
     public function selectAll($table)
     {
 
@@ -27,6 +31,10 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * @param $table
+     * @param $parameters
+     */
     public function insert($table, $parameters)
     {
 

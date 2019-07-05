@@ -8,7 +8,7 @@ class Error
 {
     public static function show()
     {
-        if (!App::get('config')['error']) {
+        if (App::get('config')['error'] == 'False') {
             return;
         }
 

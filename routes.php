@@ -1,5 +1,8 @@
 <?php
 
+use Core\Router;
+
+$router =  new Router();
 $router->get('','HomePage@home');
 $router->get('index.php','HomePage@home');
 $router->get('home','HomePage@home');
