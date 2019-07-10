@@ -13,7 +13,7 @@ App::bind('database', new QueryBuilder(
 ));
 
 App::bind('dbConnection',
-     (strtok(App::get('config')['database']['connection'], ':'))
+     (strtok(App::get('config')['database'][App::get('config')['database']['default']]['connection'], ':'))
 );
 
 Error::show();
